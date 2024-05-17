@@ -1,0 +1,24 @@
+.job-item {
+    display: flex;
+    height: 80px;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .information {
+        flex: 2;
+
+        h3 {
+            margin: 0;
+        }
+        .secondary-information {
+            display: flex;
+            gap: 30px;
+        }
+    }
+}

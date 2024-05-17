@@ -1,0 +1,14 @@
+<div class="job-item" *ngIf="jobItem">
+    <img [src]="jobItem.companyLogo" alt="{{jobItem.companyName}}" />
+    <div class="information">
+        <h3><a [routerLink]="['/jobs', jobItem.id]">{{jobItem.title}}</a></h3>
+        <div class="secondary-information">
+            <span>Company: {{jobItem.companyName}}</span>
+            <span>Reference: {{jobItem.reference}}</span>
+        </div>
+    </div>
+    <span
+        *ngIf="pageType === 'All'"
+        id="star-{{jobItem.id}}" class="icon-star" [class.active]="jobItem.isFavorite"
+        (click)="onFavoriteClicked(jobItem)"></span>
+</div>

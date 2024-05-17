@@ -12,6 +12,8 @@ const INTEGRITY_CHECKSUM = '223d191a56023cd36aa88c802961b911'
 const IS_MOCKED_RESPONSE = Symbol('isMockedResponse')
 const activeClientIds = new Set()
 
+beforeAll(() => server.listen({ onUnhandledRequest: "bypass" }));
+
 self.addEventListener('install', function () {
   self.skipWaiting()
 })

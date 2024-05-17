@@ -1,0 +1,9 @@
+<ng-container *ngIf="favoriteJobs.length > 0; else emptyFavoriteList">
+    <div *ngFor="let job of favoriteJobs; let last = last">
+        <app-job-list-item [jobItem]="job" pageType="Favorite"></app-job-list-item>
+        <hr *ngIf="!last" class="hr-margin" />
+    </div>
+</ng-container>
+<ng-template #emptyFavoriteList>
+    <p>No favorite jobs selected</p>
+</ng-template>

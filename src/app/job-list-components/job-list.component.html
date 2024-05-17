@@ -1,0 +1,4 @@
+<div *ngFor="let job of jobList; let last = last">
+    <app-job-list-item [jobItem]="job"></app-job-list-item>
+    <hr *ngIf="!last" class="hr-margin" />
+</div>
