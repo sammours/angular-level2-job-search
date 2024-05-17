@@ -6,7 +6,7 @@
     <div class="title">
         <img [src]="job.companyLogo" alt="{{job.companyName}}" />
         <div>
-            <h1>{{job.title}}</h1>
+            <h1>{{job.companyName}} - {{job.title}}</h1>
             <div class="badge-container">
                 <span class="badge" *ngFor="let type of job.types">{{type}}</span>
                 <span class="badge" *ngFor="let industry of job.industries" innerHTML="{{industry}}"></span>
